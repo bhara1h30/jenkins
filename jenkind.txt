@@ -1,0 +1,32 @@
+# Jenkins – New Item (Quick Guide)
+
+This project explains what to select when creating a **New Item** in Jenkins and how to start a basic CI/CD job.
+
+## Recommended Choice
+- **Pipeline** → Best option (uses `Jenkinsfile`, scalable, industry standard)
+
+## Other Options
+- **Freestyle Project** → Simple jobs, beginners
+- **Multibranch Pipeline** → Auto-build all Git branches
+- **Folder** → Organize multiple jobs
+
+## Basic Steps
+1. Jenkins Dashboard → **New Item**
+2. Enter Item Name
+3. Select **Pipeline**
+4. Click **OK**
+5. Add Pipeline script or Git repo with `Jenkinsfile`
+6. Save → **Build Now**
+
+## Sample Jenkinsfile
+```groovy
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Build successful'
+            }
+        }
+    }
+}
